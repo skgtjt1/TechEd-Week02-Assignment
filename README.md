@@ -18,6 +18,11 @@ An accessible image gallery with keyboard navigation
 5. Javascript Elements
 6. Look at stretch goals
 
+*more planning*
+thumbnails should use lower resolution images to save bandwidth
+
+
+
 # below is the moodle assignment info:
 
 Project: Building an accessible image gallery
