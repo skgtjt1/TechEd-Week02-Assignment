@@ -18,10 +18,8 @@ An accessible image gallery with keyboard navigation
 5. Javascript Elements
 6. Look at stretch goals
 
-*more planning*
+_more planning_
 thumbnails should use lower resolution images to save bandwidth
-
-
 
 # below is the moodle assignment info:
 
@@ -74,3 +72,11 @@ Please also provide an assignment reflection in your project README.md file.
 What went really well and what could have gone better?
 Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
 Describing errors or bugs you encountered while completing your assignment.
+
+MY NOTES
+
+CSS grid was really easy to set up, but I actually think flex for the main laybout may have been better, allowing for some automatic movement of the larger elements such as the big image container and the thumnail bar. I'd explore that option next time to make better use of the screenspace in mobile mode.
+
+I also made the decision to strictly enfore image aspect ratio and to constrain the image to the viewport, this is an aesthetic choice I made and can cause the layout to be a bit wonky.
+
+the thumbnails bar uses smaller files but since I'm using links I was limited to 640px, improvements to performance could be gained by creating dedicated small thumbnail files.
