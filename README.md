@@ -62,21 +62,41 @@ Please also provide an assignment reflection in your project README.md file.
 (Required)
 🎯 Please mention the requirements you met and which goals you achieved for this assignment.
 
+- Layout was accomplished with CSS grid for the main page and flexbox for image div elements.
+
+- I implemented media queries and approached the design mobile first, however my mobile design was hampered by picking different aspect ratio images for the gallery and sticking to fixed aspect ratio which meant my thumbnail bar is placed very low and the design language is poor. The desktop site works better.
+
+- The thumbnail bar can scroll and display larger versions of each image on the main page. I used the index of the thumbnails in their object "imageList" extensively to make sure the correct large image is displayed and to help with knowing place in list when using the buttons/arrows.
+
+- There are prev and next buttons to go through the images with greater accessibility
+
+- Arrow keys also work
+
 🎯 Were there any requirements or goals that you were not quite able to achieve?
+
+- I wanted to implement a button to toggle the thumbnail bar but didn't have time.
+
+- I didn't implement pressing a key to select the images in the thumbnail bar in time.
 
 🎯 If so, could you please tell us what was it that you found difficult about these tasks?
 
 (Optional)
 🏹 Feel free to add any other reflections you would like to share about your submission e.g.
 
-What went really well and what could have gone better?
-Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
-Describing errors or bugs you encountered while completing your assignment.
+# What went really well and what could have gone better?
+
+-CSS grid was really easy to set up, but I actually think flex for the main laybout may have been better, allowing for some automatic movement of the larger elements such as the big image container and the thumnail bar. I'll explore that option next time to make better use of the screenspace in mobile mode.
+
+-I also made the decision to strictly enfore image aspect ratio and to constrain the image to the viewport, this is an aesthetic choice I made and can cause the layout to be a bit wonky.
+
+-the thumbnails bar uses smaller files but since I'm using links I was limited to 640px, improvements to performance could be gained by creating dedicated small thumbnail files.
+
+# Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
+
+-MDN and W3schools as usual, plus google. I also debugged a couple of if statements with GPT4: specifically to get the nextImage and prevImage functions to loop around, it basically told me to use imageList.length - 1.
+
+# Describing errors or bugs you encountered while completing your assignment.
+
+- I had
 
 MY NOTES
-
-CSS grid was really easy to set up, but I actually think flex for the main laybout may have been better, allowing for some automatic movement of the larger elements such as the big image container and the thumnail bar. I'd explore that option next time to make better use of the screenspace in mobile mode.
-
-I also made the decision to strictly enfore image aspect ratio and to constrain the image to the viewport, this is an aesthetic choice I made and can cause the layout to be a bit wonky.
-
-the thumbnails bar uses smaller files but since I'm using links I was limited to 640px, improvements to performance could be gained by creating dedicated small thumbnail files.

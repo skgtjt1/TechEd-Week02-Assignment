@@ -57,22 +57,6 @@ let imageIndex = 0;
 const prevButton = document.getElementById("button-left");
 const nextButton = document.getElementById("button-right");
 
-//initial commits will inherit some code from the example site given, I will later modify and improve - going to try forEach instead
-// function thumbnailImages() {
-//   for (let image of imageList) {
-//     let thumbImg = document.createElement("img");
-//     thumbImg.setAttribute("src", image.thumbnail);
-//     thumbImg.setAttribute("alt", image.alt);
-//     thumbImg.setAttribute("tabindex", "0");
-//     thumbnailContainer.appendChild(thumbImg);
-//     //testing the click:
-//     thumbImg.addEventListener("click", function () {
-//       imageIndex = image;
-//       generateMainImg();
-//     });
-//   }
-// }
-
 function thumbnailImages() {
   imageList.forEach((image, index) => {
     //forEach has a second paramter which represents the index of the current element of the array, therefor no need to increment with ++i etc
@@ -95,6 +79,9 @@ function generateMainImg() {
   // description.textContent = imageList[imageIndex].alt;
 }
 
+thumbnailImages();
+generateMainImg();
+
 function previousImage() {
   // previous image
   if (imageIndex > 0) {
@@ -107,6 +94,7 @@ function previousImage() {
 }
 
 function nextImage() {
+  // next image
   if (imageIndex < imageList.length - 1) {
     imageIndex++;
     generateMainImg();
@@ -119,6 +107,13 @@ function nextImage() {
 prevButton.addEventListener("click", previousImage);
 nextButton.addEventListener("click", nextImage);
 
-thumbnailImages();
+//arrow keys - seemed simplest to re-use my button functions here
 
-generateMainImg();
+document.addEventListener("keydown", function (event) {
+  //keydown event not keypress!!
+  if (event.key === "ArrowLeft") {
+    previousImage();
+  } else if (event.key === "ArrowRight") {
+    nextImage(); //simple if statements
+  }
+});
