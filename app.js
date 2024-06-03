@@ -54,6 +54,8 @@ const thumbnailContainer = document.getElementById("thumbnail-container");
 let thumbNailIndex = 0;
 const bigImage = document.getElementById("large-image");
 let imageIndex = 0;
+const prevButton = document.getElementById("button-left");
+const nextButton = document.getElementById("button-right");
 
 //initial commits will inherit some code from the example site given, I will later modify and improve - going to try forEach instead
 // function thumbnailImages() {
@@ -92,6 +94,31 @@ function generateMainImg() {
   bigImage.setAttribute("alt", imageList[imageIndex].alt);
   // description.textContent = imageList[imageIndex].alt;
 }
+
+function previousImage() {
+  // previous image
+  if (imageIndex > 0) {
+    imageIndex--;
+    generateMainImg();
+  } else {
+    imageIndex = imageList.length - 1;
+    generateMainImg();
+  }
+}
+
+function nextImage() {
+  if (imageIndex < imageList.length - 1) {
+    imageIndex++;
+    generateMainImg();
+  } else if (imageIndex === imageList.length - 1) {
+    imageIndex = 0;
+    generateMainImg();
+  }
+}
+
+prevButton.addEventListener("click", previousImage);
+nextButton.addEventListener("click", nextImage);
+
 thumbnailImages();
 
 generateMainImg();
